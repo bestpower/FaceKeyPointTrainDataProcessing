@@ -1,8 +1,8 @@
 # FaceKeyPointTrainDataProcessing
 本工程所有代码主要用于批量实现公开人脸300w/lfpw/afw/helen人脸68个关键点检测训练数据的处理与增强操作，方便后续的训练工作  
 ### 运行环境：
-IDE：Pycharm
-依赖库：Python3.6.3 Pillow matplotlib numpy opencv-python   
+IDE：Pycharm  
+依赖库：Python3.6.3 Pillow matplotlib numpy opencv-python  
 ## 数据整理主要分为三个步骤：  
 ### 1、训练数据下载  
 #### 地址：  

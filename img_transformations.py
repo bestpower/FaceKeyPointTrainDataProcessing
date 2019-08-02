@@ -133,19 +133,39 @@ def getFaceArea(input_txt):
     x_num = []
     y_num = []
     fa = []
+    with open(input_txt, 'r') as f:
+        linelist = f.readlines()
+        f.close()
+    lines = []
+    for l in linelist:
+        lines.append(l)
     num_of_line = 1
     with open(input_txt, 'r') as f:
-        while True:
-            line = f.readline()
-            if num_of_line <= 3:
-                print(line)
-            elif num_of_line > 3 and num_of_line < 72:
-                num = list(map(float, line.strip().split()))
-                x_num.append(num.__getitem__(0))
-                y_num.append(num.__getitem__(1))
-            elif num_of_line >= 72:
-                break
-            num_of_line = num_of_line + 1
+        if lines[0].__contains__("version"):
+            while True:
+                line = f.readline()
+                if num_of_line <= 3:
+                    print(line)
+                elif num_of_line > 3 and num_of_line < 72:
+                    num = list(map(float, line.strip().split()))
+                    x_num.append(num.__getitem__(0))
+                    y_num.append(num.__getitem__(1))
+                elif num_of_line >= 72:
+                    break
+                num_of_line = num_of_line + 1
+        else:
+            while True:
+                line = f.readline()
+                if num_of_line == 1:
+                    print(line)
+                elif num_of_line > 1 and num_of_line < 70:
+                    num = list(map(float, line.strip().split()))
+                    x_num.append(num.__getitem__(0))
+                    y_num.append(num.__getitem__(1))
+                elif num_of_line >= 70:
+                    break
+                num_of_line = num_of_line + 1
+        f.close()
 
     x_min_index, x_min_number = min(enumerate(x_num), key=operator.itemgetter(1))  # 找出人脸关键点最小横坐标
     fa.append(x_min_number)
@@ -277,8 +297,10 @@ def drawOcclusionImg(img_path, output_img):
     :return:
     """
     im = Image.open(img_path)
+    img_size = im.size
     plt.imshow(im)
     fig = plt.gcf()
+    fig.set_size_inches((img_size.__getitem__(0) / 100.0), (img_size.__getitem__(1) / 100.0))
 
     # 颜色选项
     c = ['b', 'c', 'g', 'k', 'm', 'r', 'w', 'y']
@@ -297,12 +319,12 @@ def drawOcclusionImg(img_path, output_img):
         fa = getFaceArea(output_txt_file)
 
     # 坐标范围（保证不超过人脸尺寸边缘）
-    xmin = float((fa[1] - fa[0])/2 * sqrt(5))
-    xmax = float(fa[1] - xmin)
-    ymin = float((fa[3] - fa[2]) / 2 * sqrt(5))
-    ymax = float(fa[3] - ymin)
+    xmin = float(fa[0] + ((fa[1] - fa[0]) / (2 * sqrt(5))))
+    xmax = float(fa[1] - ((fa[1] - fa[0]) / (2 * sqrt(5))))
+    ymin = float(fa[2] + ((fa[3] - fa[2]) / (2 * sqrt(5))))
+    ymax = float(fa[3] - ((fa[3] - fa[2]) / (2 * sqrt(5))))
     # 遮挡面积20%人脸区域
-    so = 112*112*9/5.0
+    so = (fa[1] - fa[0])*(fa[3] - fa[2]) / 10.0
     # 绘制遮挡（随机位置、随机颜色、随机形状）
     plt.scatter(random.uniform(xmin, xmax), random.uniform(ymin, ymax),
                 color=random.choice(c), marker=random.choice(m), s=so)

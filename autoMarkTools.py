@@ -78,7 +78,7 @@ def MarkTool(img_root_path):
                 if matchObj:
                     print(img_root_path + fileName + " 已标记过")
                 else:
-                    fitxt = img_root_path + fileName + ".txt"
+                    fitxt = img_root_path + fileName + ".pts"
                     print("正在标记：" + str(fi))
                     imgShowAndMark(fi, fitxt)
     # jpg格式图片处理
@@ -93,12 +93,13 @@ def MarkTool(img_root_path):
                 if matchObj:
                     print(img_root_path + fileName + " 已标记过")
                 else:
-                    fitxt = img_root_path + fileName + ".txt"
+                    fitxt = img_root_path + fileName + ".pts"
                     print("正在标记：" + str(fi))
                     imgShowAndMark(fi, fitxt)
 
 if __name__ == "__main__":
-    MarkTool("helen/trainfaceset/") # 属性标记自动化工具
+    # MarkTool("helen/trainfaceset/") # 属性标记自动化工具
     # MarkTool("lfpw/trainfaceset/") # 属性标记自动化工具
     # MarkTool("afw/trainfaceset/") # 属性标记自动化工具
     # MarkTool("300w/trainfaceset/") # 属性标记自动化工具
+    MarkTool("ours/")

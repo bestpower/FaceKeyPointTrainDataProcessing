@@ -14,28 +14,31 @@ import camera
 
 class Point_Move:
     showverts = True
-    offset = 2  # 距离偏差设置
+    offset = 3  # 距离偏差设置
 
     def __init__(self, img_path):
     
         # 设置显示图片
         im = Image.open(img_path)
-        im = im.transpose(Image.FLIP_TOP_BOTTOM)
+        # im = im.transpose(Image.FLIP_TOP_BOTTOM)
 
         # 创建figure（绘制面板）、创建图表（axes）
         self.fig, self.ax = plt.subplots()
         plt.imshow(im)
         # 设置标题
-        self.ax.set_title('Click and drag a point to move it, this will update the ax txt!')
+        self.ax.set_title(img_path + "\n" +
+                          'Click and drag a point to move it, this will update the ax txt!')
         # 设置坐标轴范围
         self.img_size = im.size
-        self.ax.set_xlim(0, self.img_size[0]) # 图片像素宽度
-        self.ax.set_ylim(0, self.img_size[1]) # 图片像素高度
+        self.ax.set_xlim(0, self.img_size[0])  # 图片像素宽度
+        self.ax.set_ylim(0, self.img_size[1])  # 图片像素高度
+        self.ax.xaxis.set_ticks_position('top')  # 将x轴的位置设置在顶部
+        self.ax.invert_yaxis()  # y轴反向
         # 设置关键点初始值
         self.x, self.y = self.getFacePoit(img_path) # 调用模型或读取标签文件中关键点坐标信息
         # 绘制2D的动画line
-        self.line = Line2D(self.x, self.y, ls="", marker='o', 
-                            markersize=2, markerfacecolor='r', animated=True)
+        self.line = Line2D(self.x, self.y, ls="", marker='.',
+                            markersize=2, markerfacecolor='g', animated=True)
         self.ax.add_line(self.line)
         # 标志值设为none
         self._ind = None
@@ -87,7 +90,7 @@ class Point_Move:
         # 更新当前点坐标信息
         lineNum = self._ind + 4
         print("Replace line num = " + str(lineNum))
-        newLine = '%.7s' % str(event.xdata) + " " + '%.7s' % str(self.img_size[1] - event.ydata) + "\n"
+        newLine = '%.7s' % str(event.xdata) + " " + '%.7s' % str(event.ydata) + "\n"
         print("New line = " + newLine)
         self.replaceLine(self.txt_path, lineNum, newLine)
         # 重置标签序号
@@ -105,9 +108,8 @@ class Point_Move:
         self.x[self._ind] = x
         self.y[self._ind] = y
         # 根据更新的数值，重新绘制图形
-        self.line = Line2D(self.x, self.y, ls="",
-                           marker='o', markersize=2, markerfacecolor='r',
-                           animated=True)
+        self.line = Line2D(self.x, self.y, ls="", marker='.',
+                           markersize=2, markerfacecolor='g', animated=True)
         self.ax.add_line(self.line)
         # 恢复背景
         self.canvas.restore_region(self.background)
@@ -130,7 +132,7 @@ class Point_Move:
         # 根据图片路径求得标签文件路径
         if os.path.splitext(img_path)[1] == '.jpg' or os.path.splitext(img_path)[1] == '.png':
             fileName = os.path.splitext(img_path)[0]
-            self.txt_path = fileName + ".txt"
+            self.txt_path = fileName + ".pts"
             # 判断标签文件后是否存在
             if not os.path.exists(self.txt_path):
                 with open(self.txt_path, 'a') as fw:
@@ -140,35 +142,42 @@ class Point_Move:
                     # fw.write("0 0 0 0 0 0" + "\n")
                     fw.close()
                 # 调用模型输出并写入预测关键点坐标
-                landmarks, x1, y1 = camera.main(img_path)
-                for (x0, y0) in landmarks:
+                try:
+                    landmarks, x1, y1 = camera.getLandMarks(img_path)
+                    # if landmarks is not None:
+                    for (x0, y0) in landmarks.astype(np.float32):
+                        with open(self.txt_path, 'a') as fw:
+                            fw.write('%.7s' % str(x0+x1) + " " + '%.7s' % str(y0+y1) + "\n")
+                            fw.close()
+                        x.append(float('%.7s' % str(x0+x1)))
+                        y.append(float('%.7s' % str((y0+y1))))
                     with open(self.txt_path, 'a') as fw:
-                        fw.write('%.7s' % str(x0+x1) + " " + '%.7s' % str(y0+y1) + "\n")
+                        fw.write("}")
                         fw.close()
-                    x.append(float('%.7s' % str(x0+x1)))
-                    y.append(float('%.7s' % str(self.img_size[1] - (y0+y1))))
-                with open(txt_path, 'a') as fw:
-                    fw.write("}")
-                    fw.close()
+                except Exception:
+                    os.remove(self.txt_path)
+                    print("该图片未检测到人脸，无法输出标签数据")
             else:
                 # 直接读取标签文件获取关键点信息
-                num_of_line = 1
-                with open(self.txt_path, 'r') as f:
-                    while True:
-                        line = f.readline()
-                        print(line)
-                        if num_of_line <= 3:
-                            print("非坐标行")
-                        elif num_of_line > 3 and num_of_line < 72:
-                            num = list(map(float, line.strip().split()))
-                            # 坐标变换
-                            # x.append(num.__getitem__(0)*112)
-                            x.append(float('%.7s' % str(num.__getitem__(0))))
-                            # y.append(num.__getitem__(1)*112)
-                            y.append(float('%.7s' % str(self.img_size[1] - num.__getitem__(1))))
-                        else:
-                            break
-                        num_of_line = num_of_line + 1
+                try:
+                    num_of_line = 1
+                    with open(self.txt_path, 'r') as f:
+                        while True:
+                            line = f.readline()
+                            print(line)
+                            if num_of_line <= 4:
+                                print("非坐标行")
+                            elif num_of_line > 4 and num_of_line < 73:
+                                num = list(map(float, line.strip().split()))
+                                # 坐标变换
+                                x.append(float('%.7s' % str(num.__getitem__(0))))
+                                y.append(float('%.7s' % str(num.__getitem__(1))))
+                            else:
+                                break
+                            num_of_line = num_of_line + 1
+                except Exception:
+                    os.remove(self.txt_path)
+                    print("该标签数据不完整，请重新运行本程序写入")
         return x, y
 
     def replaceLine(self, txt_path, lineNum, newLine):
@@ -192,6 +201,11 @@ class Point_Move:
             fw.close()
 
 if __name__ == '__main__':
-    Point_Move("ours/20190805_0.png")
+    # Point_Move("ours/20190805_31.png")
+    Point_Move("9_Press_Conference_Press_Conference_9_290.jpg")
+    # No detect face 0 1 2 3 9 17 19 21 25 27 31 43 50 58
+
+    # for i in range(1, 61):
+    #     Point_Move("ours/20190805_" + str(i) + ".png")
 
 

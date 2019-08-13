@@ -10,11 +10,11 @@ import numpy as np
 import cv2
 from mtcnn.detect_face import MTCNN
 
-def main(img_path):
+def getLandMarks(img_path):
     image_size = 112
     lite_filename = 'deploy/landmarks68/pfld_landmarks.tflite'
     # load TFLite model and allocate tensors
-    interpreter = tf.contrib.lite.Interpreter(model_path=lite_filename)
+    interpreter = tf.lite.Interpreter(model_path=lite_filename)
     interpreter.allocate_tensors()
 
     # get input and output tensors.
@@ -77,7 +77,7 @@ def main(img_path):
         pre_landmarks = interpreter.get_tensor(output_details[0]['index'])
         pre_landmark = pre_landmarks[0]
         pre_landmark = pre_landmark.reshape(-1, 2) * [size, size]
-        return pre_landmark.astype(np.float32), x1, y1
+        return pre_landmark, x1, y1
 
         # idx = 0
         # font = cv2.FONT_HERSHEY_SIMPLEX

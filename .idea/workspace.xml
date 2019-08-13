@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a2749b3-0a2a-406a-978e-bbd54db2031d" name="Default Changelist" comment="添加动态更新点坐标代码，为后续手动更新关键点坐标做准备">
+      <change afterPath="$PROJECT_DIR$/98To68KeyPoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoMarkTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/autoMarkTools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drawFaceKeyPoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/drawFaceKeyPoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mtcnn/detect_face.py" beforeDir="false" afterPath="$PROJECT_DIR$/mtcnn/detect_face.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_108.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_78.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_79.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_80.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_81.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_82.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_83.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_84.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_85.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_86.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_87.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_89.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_91.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_92.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_93.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_94.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_95.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_97.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_98.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/20190805_99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ours/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/point_move.py" beforeDir="false" afterPath="$PROJECT_DIR$/point_move.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/point_move.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="188" column="11" selection-start-line="188" selection-start-column="11" selection-end-line="188" selection-end-column="11" />
+              <folding>
+                <element signature="e#19#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/98To68KeyPoints.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1426">
+              <caret line="63" column="28" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drawFaceKeyPoints.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mtcnn/detect_face.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17135">
+              <caret line="753" column="43" selection-start-line="753" selection-start-column="43" selection-end-line="753" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autoMarkTools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/img_transformations.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>replace</find>
+      <find>MTCNN</find>
+      <find>0.709</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/img_transformations.py" />
+        <option value="$PROJECT_DIR$/camera.py" />
+        <option value="$PROJECT_DIR$/mtcnn/detect_face.py" />
+        <option value="$PROJECT_DIR$/autoMarkTools.py" />
+        <option value="$PROJECT_DIR$/98To68KeyPoints.py" />
+        <option value="$PROJECT_DIR$/drawFaceKeyPoints.py" />
+        <option value="$PROJECT_DIR$/point_move.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/FaceKeyPointTrainDataProcessing.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="58" />
+    <option name="y" value="31" />
+    <option name="width" value="1456" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FaceKeyPointTrainDataProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FaceKeyPointTrainDataProcessing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.point_move">
+    <configuration name="98To68KeyPoints" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FaceKeyPointTrainDataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/98To68KeyPoints.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="autoMarkTools" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FaceKeyPointTrainDataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/autoMarkTools.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="drawFaceKeyPoints" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FaceKeyPointTrainDataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/drawFaceKeyPoints.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="img_transformations" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FaceKeyPointTrainDataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/img_transformations.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="point_move" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FaceKeyPointTrainDataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/point_move.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.point_move" />
+        <item itemvalue="Python.drawFaceKeyPoints" />
+        <item itemvalue="Python.98To68KeyPoints" />
+        <item itemvalue="Python.autoMarkTools" />
+        <item itemvalue="Python.img_transformations" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a2749b3-0a2a-406a-978e-bbd54db2031d" name="Default Changelist" comment="" />
+      <created>1564708938361</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564708938361</updated>
+      <workItem from="1564708939476" duration="16175000" />
+      <workItem from="1564996460593" duration="2696000" />
+      <workItem from="1565080461073" duration="7851000" />
+      <workItem from="1565138594997" duration="26499000" />
+      <workItem from="1565228453077" duration="21214000" />
+      <workItem from="1565311382937" duration="10083000" />
+      <workItem from="1565571595129" duration="1261000" />
+      <workItem from="1565658151590" duration="313000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="86092000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="-4" width="1928" height="1044" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06496273" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32937366" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32960597" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32960597" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="上传代码及说明文件" />
+    <MESSAGE value="更新遮挡数据增强部分代码" />
+    <MESSAGE value="添加动态更新点坐标代码，为后续手动更新关键点坐标做准备" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加动态更新点坐标代码，为后续手动更新关键点坐标做准备" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FaceKeyPointTrainDataProcessing$img_transformations.coverage" NAME="img_transformations Coverage Results" MODIFIED="1564717535366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FaceKeyPointTrainDataProcessing$drawFaceKeyPoints.coverage" NAME="drawFaceKeyPoints Coverage Results" MODIFIED="1565314799063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FaceKeyPointTrainDataProcessing$98To68KeyPoints.coverage" NAME="98To68KeyPoints Coverage Results" MODIFIED="1565312965675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FaceKeyPointTrainDataProcessing$point_move.coverage" NAME="point_move Coverage Results" MODIFIED="1565319069933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FaceKeyPointTrainDataProcessing$autoMarkTools.coverage" NAME="autoMarkTools Coverage Results" MODIFIED="1565252830962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>camera.getLandMarks(img_path)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list(map(float, line.strip().split()))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>lines[0].__contains__(&quot;version&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/300w/01_Indoor/indoor_001.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/1030187107/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="4947" column="8" selection-start-line="4947" selection-start-column="8" selection-end-line="4947" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/FaceUploadClientTest/venv/Lib/site-packages/matplotlib/lines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="276" column="8" selection-start-line="276" selection-start-column="8" selection-end-line="276" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/300w/01_Indoor/indoor_002.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-830">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/FaceUploadClientTest/venv/Lib/site-packages/tensorflow/python/util/lazy_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/FaceUploadClientTest/venv/Lib/site-packages/tensorflow/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="688" column="14" selection-start-line="688" selection-start-column="14" selection-end-line="688" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/FaceUploadClientTest/venv/Lib/site-packages/tensorflow/_api/v1/lite/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_0.png" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_4.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_7.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_8.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_9.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_10.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_12.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_15.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_17.pts" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_17.png" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_18.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_16.pts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_26.pts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_6.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_7.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_8.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_9.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_10.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_11.txt" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_12.pts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_13.pts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_14.pts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_15.pts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getFaceBox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="127" column="40" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_31.png" />
+    <entry file="file://$PROJECT_DIR$/ours/20190805_32.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ours/20190805_50.png" />
+    <entry file="file://$PROJECT_DIR$/Face_data_enrichment.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Face_data_mark.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotations.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WFLW/trainset/0_Parade_marchingband_1_147.pts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_move.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="188" column="11" selection-start-line="188" selection-start-column="11" selection-end-line="188" selection-end-column="11" />
+          <folding>
+            <element signature="e#19#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/98To68KeyPoints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawFaceKeyPoints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mtcnn/detect_face.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17135">
+          <caret line="753" column="43" selection-start-line="753" selection-start-column="43" selection-end-line="753" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoMarkTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img_transformations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

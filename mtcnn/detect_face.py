@@ -751,7 +751,7 @@ class MTCNN:
             self.rnet = rnet
             self.onet = onet
             self.minsize = 40  # minimum size of face
-            self.threshold = [0.6, 0.7, 0.7]  # three steps's threshold
+            self.threshold = [0.3, 0.4, 0.5]  # three steps's threshold
             self.factor = 0.709  # scale factor
 
     def predict(self, img):
